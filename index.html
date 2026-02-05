@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>❤️ For You ❤️</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="container" id="lock-screen">
+        <div class="lock-icon">
+            <i class="fas fa-lock fa-5x"></i>
+        </div>
+        <h1 class="title">Secret Valentine Message ❤️</h1>
+        <p class="message">This message is locked. Only one special person can unlock it.</p>
+        
+        <div class="input-group">
+            <input type="text" id="name-input" placeholder="Enter the secret name..." maxlength="10">
+            <button id="unlock-btn" onclick="checkName()">
+                <i class="fas fa-key"></i> Unlock My Heart
+            </button>
+        </div>
+        
+        <div class="attempts">
+            <p>Attempts left: <span id="attempts-left">3</span></p>
+            <p id="error-msg" class="error"></p>
+        </div>
+        
+        <div class="hint">
+            <p><i class="fas fa-info-circle"></i> Hint: It's the name of the most beautiful girl I know</p>
+        </div>
+    </div>
+
+    <div class="container hidden" id="unlocked-screen">
+        <div class="lock-icon">
+            <img src="Aya.jpg" alt="Aya" class="aya-photo" id="aya-img">
+        </div>
+        <h1 class="title">Welcome, My Love ❤️</h1>
+        
+        <div class="valentine-message">
+            <p>To <strong>Aya</strong>,</p>
+            <p>You unlocked my heart just like you unlocked this page. Every moment with you feels special, and this Valentine's Day, I want you to know how much you mean to me.</p>
+            <p>You're not just my girlfriend, you're my happiness, my peace, and my greatest adventure.</p>
+            <p>Happy Valentine's Day, my love! 💖</p>
+            <p class="signature">- From someone who loves you more than anything</p>
+        </div>
+        
+        <div class="hearts">
+            <i class="fas fa-heart"></i>
+            <i class="fas fa-heart"></i>
+            <i class="fas fa-heart"></i>
+            <i class="fas fa-heart"></i>
+            <i class="fas fa-heart"></i>
+        </div>
+        
+        <button onclick="lockAgain()" class="lock-again-btn">
+            <i class="fas fa-lock"></i> Lock Again
+        </button>
+    </div>
+
+    <audio id="unlock-sound" src="https://assets.mixkit.co/sfx/preview/mixkit-correct-answer-tone-2870.mp3" preload="auto"></audio>
+    <audio id="error-sound" src="https://assets.mixkit.co/sfx/preview/mixkit-wrong-answer-fail-notification-946.mp3" preload="auto"></audio>
+
+    <script src="script.js"></script>
+</body>
+</html>
