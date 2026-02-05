@@ -21,7 +21,7 @@ const errorSound = document.getElementById('error-sound');
 
 // Preload Aya image
 const preloadImage = new Image();
-preloadImage.src = "Aya.jpg";
+preloadImage.src = "aya.jpg";
 
 // Check name function
 function checkName() {
@@ -53,7 +53,7 @@ function checkName() {
         nameInput.value = "";
         
         // Ensure image loads
-        ayaImg.src = "Aya.jpg?t=" + new Date().getTime();
+        ayaImg.src = "aya.jpg?t=" + new Date().getTime();
     } else {
         // WRONG NAME
         attemptsLeft--;
@@ -141,4 +141,5 @@ style.textContent = `
 document.head.appendChild(style);
 
 // Initialize
+
 attemptsDisplay.textContent = attemptsLeft;
