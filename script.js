@@ -15,11 +15,11 @@ const nameInput = document.getElementById('name-input');
 const attemptsDisplay = document.getElementById('attempts-left');
 const errorMsg = document.getElementById('error-msg');
 const unlockBtn = document.getElementById('unlock-btn');
-const ayaImg = document.getElementById('hesta-img');
+const hestaImg = document.getElementById('hesta-img');
 const unlockSound = document.getElementById('unlock-sound');
 const errorSound = document.getElementById('error-sound');
 
-// Preload Aya image
+// Preload Hesta image
 const preloadImage = new Image();
 preloadImage.src = "hesta.jpg";
 
@@ -53,7 +53,7 @@ function checkName() {
         nameInput.value = "";
         
         // Ensure image loads
-        ayaImg.src = "aya.jpg?t=" + new Date().getTime();
+        hestaImg.src = "hesta.jpg?t=" + new Date().getTime();
     } else {
         // WRONG NAME
         attemptsLeft--;
@@ -143,6 +143,7 @@ document.head.appendChild(style);
 // Initialize
 
 attemptsDisplay.textContent = attemptsLeft;
+
 
 
 
