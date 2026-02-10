@@ -201,6 +201,121 @@ body {
 
 }
 
+/* ========== MOBILE OPTIMIZATION ========== */
+/* Touch-friendly buttons */
+button, input {
+    -webkit-tap-highlight-color: transparent;
+    tap-highlight-color: transparent;
+}
+
+#unlock-btn, .lock-again-btn, .upload-btn {
+    min-height: 50px;
+    touch-action: manipulation;
+}
+
+/* Mobile-specific adjustments */
+@media (max-width: 480px) {
+    .container {
+        padding: 20px 15px !important;
+        margin: 10px;
+        border-radius: 15px;
+    }
+    
+    .lock-icon i {
+        font-size: 3.5rem !important;
+    }
+    
+    .title {
+        font-size: 22px !important;
+        margin-bottom: 10px !important;
+    }
+    
+    .message {
+        font-size: 16px !important;
+        line-height: 1.4 !important;
+    }
+    
+    #name-input, #unlock-btn {
+        font-size: 16px !important;
+        padding: 12px 20px !important;
+    }
+    
+    .hesta-photo, .photo-placeholder {
+        width: 150px !important;
+        height: 150px !important;
+    }
+    
+    .valentine-message {
+        padding: 15px !important;
+        font-size: 14px !important;
+    }
+    
+    .hearts {
+        font-size: 24px !important;
+    }
+    
+    /* Prevent zoom on input focus */
+    input, textarea, select {
+        font-size: 16px !important;
+    }
+    
+    /* Better touch targets */
+    button {
+        min-width: 44px;
+        min-height: 44px;
+    }
+}
+
+/* iPhone X/11/12 notch support */
+@supports (padding: max(0px)) {
+    .container {
+        padding-left: max(15px, env(safe-area-inset-left));
+        padding-right: max(15px, env(safe-area-inset-right));
+        padding-bottom: max(20px, env(safe-area-inset-bottom));
+    }
+    
+    body {
+        padding: env(safe-area-inset-top) env(safe-area-inset-right) 
+                env(safe-area-inset-bottom) env(safe-area-inset-left);
+    }
+}
+
+/* Mobile keyboard fixes */
+#name-input:focus {
+    font-size: 16px !important; /* Prevent iOS zoom */
+}
+
+/* Disable text selection */
+.container {
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+/* Mobile scroll fix */
+body {
+    overflow-x: hidden;
+    -webkit-overflow-scrolling: touch;
+}
+
+/* Mobile icon size */
+.mobile-icon {
+    font-size: 4rem !important;
+}
+
+@media (max-height: 700px) {
+    .container {
+        padding: 15px 10px !important;
+    }
+    
+    .lock-icon {
+        margin-bottom: 15px !important;
+    }
+    
+    .hesta-photo, .photo-placeholder {
+        width: 120px !important;
+        height: 120px !important;
+    }
+}
 
 
 
