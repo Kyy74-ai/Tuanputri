@@ -38,7 +38,7 @@ body {
     animation: pulse 2s infinite;
 }
 
-.aya-photo {
+.hesta-photo {
     width: 200px;
     height: 200px;
     border-radius: 50%;
@@ -194,8 +194,9 @@ body {
         font-size: 24px;
     }
     
-    .aya-photo {
+    .hesta-photo {
         width: 150px;
         height: 150px;
     }
+
 }
