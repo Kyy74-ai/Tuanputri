@@ -12,6 +12,7 @@ body {
     justify-content: center;
     align-items: center;
     padding: 20px;
+    min-height: calc(var(--vh, 1vh) * 100);
 }
 
 .container {
@@ -316,6 +317,7 @@ body {
         height: 120px !important;
     }
 }
+
 
 
 
