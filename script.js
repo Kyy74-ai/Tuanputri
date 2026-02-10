@@ -1,6 +1,6 @@
 // Configuration
-const SECRET_NAME = "Aya";
-const MAX_ATTEMPTS = 3;
+const SECRET_NAME = "Hesta";
+const MAX_ATTEMPTS = 5;
 const TIMEOUT_DURATION = 30000; // 30 seconds in milliseconds
 
 // State variables
@@ -143,3 +143,4 @@ document.head.appendChild(style);
 // Initialize
 
 attemptsDisplay.textContent = attemptsLeft;
+
