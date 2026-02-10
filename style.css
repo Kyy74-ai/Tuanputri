@@ -41,7 +41,7 @@ body {
 .hesta-photo {
     width: 250px;
     height: 200px;
-    border-radius: 50%;
+    border-radius: 10%;
     object-fit: cover;
     border: 5px solid #ff6b8b;
     box-shadow: 0 10px 20px rgba(255, 107, 139, 0.3);
@@ -200,5 +200,6 @@ body {
     }
 
 }
+
 
 
