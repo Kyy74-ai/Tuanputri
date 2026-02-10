@@ -39,7 +39,7 @@ body {
 }
 
 .hesta-photo {
-    width: 200px;
+    width: 250px;
     height: 200px;
     border-radius: 50%;
     object-fit: cover;
@@ -200,3 +200,4 @@ body {
     }
 
 }
+
