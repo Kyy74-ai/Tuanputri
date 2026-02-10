@@ -2,164 +2,67 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <meta name="theme-color" content="#ff0066">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <title>💖 Secret Valentine Message 💖</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>❤️ For You ❤️</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- Background Elements -->
-    <div class="floating-hearts"></div>
-    <div class="sparkles"></div>
-    <div class="light-beam"></div>
-    
-    <!-- Lock Screen -->
     <div class="container" id="lock-screen">
-        <div class="glow-effect"></div>
-        <div class="heart-container">
-            <div class="outer-heart">
-                <div class="inner-heart">
-                    <i class="fas fa-lock premium-icon"></i>
-                </div>
-            </div>
+        <div class="lock-icon">
+            <i class="fas fa-lock fa-5x"></i>
         </div>
-        
-        <h1 class="title shimmer">💝 Secret Valentine Message 💝</h1>
-        <p class="message">This heartfelt message is locked with love. Only one special person can unlock it.</p>
+        <h1 class="title">Secret Valentine Message ❤️</h1>
+        <p class="message">This message is locked. Only one special person can unlock it.</p>
         
         <div class="input-group">
-            <div class="input-wrapper">
-                <i class="fas fa-heart input-icon"></i>
-                <input type="text" id="name-input" placeholder="Type the secret name here..." maxlength="15" autocomplete="off">
-            </div>
-            <button id="unlock-btn" onclick="checkName()" ontouchend="checkName()">
-                <i class="fas fa-key"></i>
-                <span class="btn-text">Unlock My Heart</span>
-                <div class="btn-glow"></div>
+            <input type="text" id="name-input" placeholder="Enter the secret name..." maxlength="10">
+            <button id="unlock-btn" onclick="checkName()">
+                <i class="fas fa-key"></i> Unlock My Heart
             </button>
         </div>
         
         <div class="attempts">
-            <div class="attempts-counter">
-                <i class="fas fa-shield-alt"></i>
-                <p>Attempts: <span id="attempts-left">3</span>/3</p>
-            </div>
+            <p>Attempts left: <span id="attempts-left">3</span></p>
             <p id="error-msg" class="error"></p>
         </div>
         
         <div class="hint">
-            <i class="fas fa-lightbulb"></i>
-            <p><strong>Hint:</strong> It's the name of the girl who makes my world brighter ✨</p>
-        </div>
-        
-        <div class="love-quote">
-            <i class="fas fa-quote-left"></i>
-            <p>"Love is not about how many days, months, or years you have been together. Love is about how much you love each other every single day."</p>
-            <i class="fas fa-quote-right"></i>
+            <p><i class="fas fa-info-circle"></i> Hint: It's the name of the most beautiful girl I know</p>
         </div>
     </div>
 
-    <!-- Unlocked Screen -->
     <div class="container hidden" id="unlocked-screen">
-        <div class="unlock-animation">
-            <div class="confetti"></div>
-            <div class="love-burst"></div>
+        <div class="lock-icon">
+            <img src="hesta.jpg" alt="Hesta" class="hesta-photo" id="hesta-img">
+        </div>
+        <h1 class="title">Welcome, My Love ❤️</h1>
+        
+        <div class="valentine-message">
+            <p>To <strong>Hesta</strong>,</p>
+            <p>You unlocked my heart just like you unlocked this page. Every moment with you feels special, and this Valentine's Day, I want you to know how much you mean to me.</p>
+            <p>You're not just my girlfriend, you're my happiness, my peace, and my greatest adventure.</p>
+            <p>Happy Valentine's Day, my love! 💖</p>
+            <p class="signature">- From someone who loves you more than anything</p>
         </div>
         
-        <div class="photo-frame">
-            <div class="frame-border">
-                <div class="frame-corner tl"></div>
-                <div class="frame-corner tr"></div>
-                <div class="frame-corner bl"></div>
-                <div class="frame-corner br"></div>
-                <img src="hesta.jpg" alt="My Love" class="love-photo" id="hesta-img">
-                <div class="photo-shine"></div>
-            </div>
-            <div class="rose left-rose">
-                <i class="fas fa-spa"></i>
-            </div>
-            <div class="rose right-rose">
-                <i class="fas fa-spa"></i>
-            </div>
+        <div class="hearts">
+            <i class="fas fa-heart"></i>
+            <i class="fas fa-heart"></i>
+            <i class="fas fa-heart"></i>
+            <i class="fas fa-heart"></i>
+            <i class="fas fa-heart"></i>
         </div>
         
-        <h1 class="title love-title">
-            <span class="heart-beat">❤️</span> Welcome, My Dearest <span id="display-name">Hesta</span> <span class="heart-beat">❤️</span>
-        </h1>
-        
-        <div class="valentine-card">
-            <div class="card-inner">
-                <div class="card-front">
-                    <i class="fas fa-envelope-open-text"></i>
-                    <h3>Open Your Message</h3>
-                </div>
-                <div class="card-back">
-                    <div class="card-content">
-                        <p class="greeting">To my beloved <strong id="card-name">Hesta</strong>,</p>
-                        <p class="card-message">From the moment you entered my life, everything changed for the better. Your smile is my sunrise, your laughter is my favorite melody, and your love is my greatest treasure.</p>
-                        <p class="card-message">On this special day, I want you to know that my love for you grows stronger with each passing moment. You are not just my Valentine; you are my forever.</p>
-                        <p class="card-message">Every day with you feels like a page from a beautiful love story that I never want to end. 💕</p>
-                        <p class="signature">With all my love, forever yours</p>
-                        <div class="seal">
-                            <i class="fas fa-heart"></i>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        
-        <div class="interactive-hearts">
-            <div class="heart-btn" onclick="showLove(0)">
-                <i class="fas fa-heart"></i>
-                <span>I Love You</span>
-            </div>
-            <div class="heart-btn" onclick="showLove(1)">
-                <i class="fas fa-kiss-wink-heart"></i>
-                <span>You're Amazing</span>
-            </div>
-            <div class="heart-btn" onclick="showLove(2)">
-                <i class="fas fa-star"></i>
-                <span>My Everything</span>
-            </div>
-        </div>
-        
-        <div class="music-player">
-            <button id="music-toggle" onclick="toggleMusic()">
-                <i class="fas fa-music"></i>
-                <span>Love Song</span>
-            </button>
-            <audio id="love-song" loop>
-                <source src="https://assets.mixkit.co/music/preview/mixkit-loving-you-117.mp3" type="audio/mpeg">
-            </audio>
-        </div>
-        
-        <div class="love-counter">
-            <i class="fas fa-heartbeat"></i>
-            <p>Days I've loved you: <span id="day-count">0</span> days</p>
-        </div>
-        
-        <button onclick="lockAgain()" class="premium-btn lock-again-btn">
-            <i class="fas fa-redo"></i>
-            Create Your Own Love Message
+        <button onclick="lockAgain()" class="lock-again-btn">
+            <i class="fas fa-lock"></i> Lock Again
         </button>
-        
-        <div class="social-share">
-            <p>Share this love:</p>
-            <button class="share-btn" onclick="shareLove()">
-                <i class="fas fa-share-alt"></i>
-            </button>
-        </div>
     </div>
 
-    <!-- Audio Elements -->
-    <audio id="unlock-sound" src="https://assets.mixkit.co/sfx/preview/mixkit-magic-sparkles-300.mp3" preload="auto"></audio>
+    <audio id="unlock-sound" src="https://assets.mixkit.co/sfx/preview/mixkit-correct-answer-tone-2870.mp3" preload="auto"></audio>
     <audio id="error-sound" src="https://assets.mixkit.co/sfx/preview/mixkit-wrong-answer-fail-notification-946.mp3" preload="auto"></audio>
-    <audio id="heartbeat-sound" src="https://assets.mixkit.co/sfx/preview/mixkit-heartbeat-1002.mp3" preload="auto"></audio>
-    <audio id="sparkle-sound" src="https://assets.mixkit.co/sfx/preview/mixkit-sparkles-1460.mp3" preload="auto"></audio>
 
     <script src="script.js"></script>
 </body>
+
 </html>
